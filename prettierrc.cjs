@@ -26,4 +26,17 @@ module.exports = {
   trailingComma: "es5",
   // 탭 사용 여부
   useTabs: false,
+
+  overrides: [
+    {
+      files: [
+        "markdown.md",
+        "retrospect.md"
+      ],
+      options: {
+        parser: "markdown",
+        printWidth: 1000, // 충분히 큰 값을 설정하여 포맷팅을 피함
+      },
+    },
+  ],
 };
