@@ -3,6 +3,19 @@
 /* reset style */
 html,body{margin: 0;padding: 0;}
 
+/* screen reader only */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
 /* avatars css */
 .avatars{
 	.avatars_layout{
@@ -24,8 +37,6 @@ html,body{margin: 0;padding: 0;}
 		}
 
 		.user_img{
-			width: 64px;
-			height: 64px;
 			border-radius: 50%;
 			object-fit: cover;
 			background-color: #ddd;
