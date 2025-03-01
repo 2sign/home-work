@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>NAVER 로그인</title>
+		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"/>
+		<link rel="stylesheet" href="/src/login/styles/login.css">
+	</head>
+	<body>
+		<!-- HTML 마크업을 작성해 주세요 -->
+
+		
+		<div class="container">
+			<div class="login_wrap">
+				<h1 class="logo">
+					<img src="/src/login/image/naver_logo.svg" alt="NAVER" />
+				</h1>
+
+
+				<form class="login_form" action="" method="post">
+					<label class="id_label" for="username">
+						<input class="id_input" type="text" id="username" name="username" placeholder="아이디(이메일)" required />
+						<span id="id_alert" class="alert_text">아이디는 이메일 형식으로 입력해 주세요</span>
+					</label>
+
+					<label class="pw_label" for="password">
+						<input class="pw_input" type="password" id="password" name="password" placeholder="비밀번호" minlength="10" pattern=".{10,}" required />
+						<span id="pw_alert" class="alert_text">비밀번호는 10자리 이상 입력해 주세요</span>
+					</label>
+					
+					<button class="submit_btn" type="submit">로그인</button>
+				</form>
+
+
+				<div class="form_footer">
+					<div class="keep_check">
+						<input type="checkbox" id="keep_check" name="keep_check" value="off">
+						<label for="keep_check" tabindex="0">로그인 상태 유지</label>
+					</div>
+
+					<div class="ip_check">
+						<a class="ip_guide" href="./pages/ip_security.html" target="_blank" rel="noopener noreferrer" title="IP보안">IP보안</a>
+						<span class="ip_switch">
+							<input type="checkbox" id="ip_switch" class="switch_check" value="off">
+							<label for="ip_switch" class="switch_btn">
+								<span class="switch_on" role="checkbox" aria-checked="true">ON</span>
+								<span class="switch_off" role="checkbox" aria-checked="false">OFF</span>
+							</label>
+						</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- <script>
+			document.addEventListener('DOMContentLoaded', function() {
+				document.querySelector('.submit_btn').addEventListener('click', function(event) {
+					const username = document.getElementById('username').value;
+					const password = document.getElementById('password').value;
+
+					if(!username.includes('@')){
+						document.getElementById('id_alert').style.display = "block";
+					}
+
+					if(password.length < 10){
+						document.getElementById('pw_alert').style.display = "block";
+					}
+				});
+			});
+		</script> -->
+
+
+	</body>
+</html>
+
+

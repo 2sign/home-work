@@ -1,0 +1,165 @@
+/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+
+
+:root{
+	--primary-color:#03cf5d;
+	--font-size:1rem;
+	--font-color:#121212;
+}
+
+body{margin: 0;}
+body *{
+	color: var(--font-color);
+	font-size: var(--font-size);
+	letter-spacing: -0.03em;
+}
+
+
+.container{
+	margin-block: 4.375rem;
+
+	@media (min-width:768px){
+		margin-block: 6.25rem;
+	}
+}
+
+.login_wrap{
+	padding-inline: .9375rem;
+
+	@media (min-width:768px){
+		inline-size: 31.25rem;
+		margin: auto;
+		padding: 0;
+	}
+
+	.logo{
+		margin-block-end: 45px;
+		
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	form.login_form:focus-within .alert_text {
+		display: block;
+	}
+	form.login_form{
+		input[type="text"], input[type="password"]{
+			inline-size: 100%;
+			block-size: 3rem;
+			padding: 1.25rem;
+			box-sizing: border-box;
+			border: 1px solid #dadada;
+			background-color: #fff;
+		
+			@media (min-width:768px){
+				block-size: 2.8125rem;
+			}
+		}
+		input::placeholder{
+			color: #999;
+		}
+		input:focus{
+			outline-color: #03cf5d;
+			background-color: #e9f0fd;
+		}
+		label{
+			display: block;
+			margin-block-end: .625rem;
+		}
+
+		.alert_text{
+			display: none;
+			margin-block-start: .3125rem;
+			color: #FF1414;
+			font-size: .75rem;
+		}
+
+		.submit_btn{
+			inline-size: 100%;
+			block-size: 3.5rem;
+			margin-block-start: 1.25rem;
+			border: none;
+			background-color: var(--primary-color);
+			color: #fff;
+			font-size: 1rem;
+			font-weight: bold;
+		}
+	}
+
+
+	.form_footer{
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		margin-block-start: .625rem;
+
+		@media (min-width:768px){
+			justify-content: space-between;
+		}
+	}
+	.keep_check{
+		color: #333;
+
+		input{
+			display: none;
+		}
+		label{
+			display: inline-block;
+			padding-block: .1875rem;
+			padding-inline-start: 1.875rem;
+			background-image: url(../image/unchecked.svg);
+			background-repeat: no-repeat;
+			background-position: left center;
+			font-size: .875rem;
+		}
+		input:checked + label{
+			background-image: url(../image/checked.svg);
+		}
+	}
+
+
+	.ip_check{
+		display: none;
+
+		@media (min-width:768px){
+			display: flex;
+		}
+	}
+
+	.ip_guide{
+		margin-inline-end: .3125rem;
+		text-decoration: none;
+	}
+	.switch_check{
+		display: none;
+
+		+ .switch_btn .switch_off{
+			display: block;
+		}
+		+ .switch_btn .switch_on{
+			display: none;
+		}
+	}
+	.switch_check:checked{
+		+ .switch_btn .switch_off{
+			display: none;
+		}
+		+ .switch_btn .switch_on{
+			display: block;
+		}
+	}
+
+	.switch_btn{
+		display: block;
+		inline-size: 1.875rem;
+		font-weight: bold;
+	}
+	.switch_on{
+		color: var(--primary-color);
+	}
+	.switch_off{
+		color: #999;
+	}
+}
