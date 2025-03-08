@@ -13,3 +13,10 @@
 - [Avatars](./src/avatars/avatars.html)
 - [회고](./src/avatars/avatars.md)
 
+## Naver
+- [Avatars](./src/naver/naver.html)
+- [회고](./src/naver/naver.md)
+
+## Apple
+- [Avatars](./src/apple/apple.html)
+- [회고](./src/apple/apple.md)
