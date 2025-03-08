@@ -1,0 +1,119 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+
+
+/* text */
+.section_head{
+	color: var(--black);
+	text-align: center;
+
+	.title{
+		font-size: var(--large-text);
+		font-weight: 900;
+	}
+	.sub_text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: var(--small-spacing);
+		font-size: var(--base-text);
+		line-height: var(--line-normal);
+	}
+	.text{
+		margin-top: var(--x-small-spacing);
+		color: var(--gray);
+		font-size: var(--small-text);
+	}
+
+	@media (min-width:1024px){
+		.title{
+			font-size: var(--extra-large-text);
+		}
+		.sub_text{
+			gap: .3125rem;
+			flex-direction: row;
+			font-size: var(--medium-text);
+		}
+	}
+}
+.bg_dark{
+	.section_head{
+		color: var(--white);
+	}
+}
+
+
+/* link */
+.section_button{
+	margin-top: var(--base-spacing);
+	font-size: 0;
+	text-align: center;
+
+	.button{
+		margin-left: var(--small-spacing);
+
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+}
+
+.button{
+	cursor: pointer;
+	display: inline-block;
+	min-width: 30px;
+	padding: var(--x-small-spacing) var(--small-spacing);
+	border: 1px solid;
+	border-radius: 100px;
+	box-sizing: border-box;
+	font-size: var(--xx-small-text);
+	font-weight: bold;
+	line-height: var(--line-normal);
+	letter-spacing: -.022em;
+	white-space: nowrap;
+	text-align: center;
+	pointer-events: all;
+
+	&.button_primary{
+		border-color: var(--black);
+		background-color: var(--black);
+		color: var(--white);
+	}
+	&.button_secondary{
+		border-color: var(--black);
+    background-color: transparent;
+		color: var(--black);
+
+		&:hover{
+			background-color: var(--black);
+			color: var(--white);
+		}
+	}
+
+	@media (min-width:1024px){
+		font-size: var(--x-small-text);
+	}
+}
+
+.bg_dark .button{
+	&.button_primary{
+		border-color: var(--blue-300);
+		background-color: var(--blue-300);
+
+		&:hover{
+			border-color: var(--blue-200);
+			background-color: var(--blue-200);
+		}
+	}
+	&.button_secondary{
+		color: var(--blue-400);
+		border-color: var(--blue-400);
+
+		&:hover{
+			background-color: var(--blue-200);
+			color: var(--white);
+		}
+	}
+}

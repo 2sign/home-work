@@ -1,0 +1,155 @@
+@import "./card-component.css";
+
+/* 카드 레이아웃 */
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+	grid-template-areas:
+		"item1"
+		"item2"
+		"item3"
+		"item4"
+		"item5"
+		"item6"
+		"item7"
+	;
+	gap: 1rem;
+
+	.product_1{grid-area: item1;}
+	.product_2{grid-area: item2;}
+	.product_3{grid-area: item3;}
+	.product_4{grid-area: item4;}
+	.product_5{grid-area: item5;}
+	.product_6{grid-area: item6;}
+	.product_7{grid-area: item7;}
+
+	@media (min-width:1024px){
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		grid-template-areas:
+			"item1 item1"
+			"item2 item2"
+			"item3 item3"
+			"item4 item5"
+			"item6 item7"
+		;
+	}
+}
+
+section{
+	position: relative;
+	height: var(--size);
+	block-size: var(--size);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.bg_link{
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.contents{
+		z-index: 2;
+		position: relative;
+		padding-top: var(--large-spacing);
+		pointer-events: none;
+	
+		@media (min-width:1024px) {
+			padding-top: var(--extra-large-spacing);
+		}
+	}
+}
+
+.product_1{
+	background-image: url("../products/ipad_pro.jpeg");
+  background-image: image-set(
+    "../products/ipad_pro.jpeg" 1x,
+    "../products/ipad_pro_2x.jpeg" 2x
+  );
+
+	@media (min-width:1024px){
+		background-image: url("../products/ipad_pro_wide.jpeg");
+		background-image: image-set(
+			"../products/ipad_pro_wide.jpeg" 1x,
+			"../products/ipad_pro_wide_2x.jpeg" 2x
+		);
+	}
+}
+
+.product_2{
+	grid-area: item2;
+	background-image: url("../products/ipad_air.jpeg");
+  background-image: image-set(
+    "../products/ipad_air.jpeg" 1x,
+    "../products/ipad_air_2x.jpeg" 2x
+  );
+
+	@media (min-width:1024px){
+		background-image: url("../products/ipad_air_wide.jpeg");
+		background-image: image-set(
+			"../products/ipad_air_wide.jpeg" 1x,
+			"../products/ipad_air_wide_2x.jpeg" 2x
+		);
+	}
+}
+
+.product_3{
+	grid-area: item3;
+	background-image: url("../products/iphone15_pro.jpeg");
+  background-image: image-set(
+    "../products/iphone15_pro.jpeg" 1x,
+    "../products/iphone15_pro_2x.jpeg" 2x
+  );
+
+	@media (min-width:1024px){
+		background-image: url("../products/iphone15_pro_wide.jpeg");
+		background-image: image-set(
+			"../products/iphone15_pro_wide.jpeg" 1x,
+			"../products/iphone15_pro_wide_2x.jpeg" 2x
+		);
+	}
+}
+
+.product_4{
+	grid-area: item4;
+	background-image: url("../products/iphone15.jpeg");
+  background-image: image-set(
+    "../products/iphone15.jpeg" 1x,
+    "../products/iphone15_2x.jpeg" 2x
+  );
+}
+
+.product_5{
+	grid-area: item5;
+	background-image: url("../products/apple_watch.jpeg");
+  background-image: image-set(
+    "../products/apple_watch.jpeg" 1x,
+    "../products/apple_watch_2x.jpeg" 2x
+  );
+}
+
+.product_6{
+	grid-area: item6;
+	background-image: url("../products/macbook_air.jpeg");
+  background-image: image-set(
+    "../products/macbook_air.jpeg" 1x,
+    "../products/macbook_air_2x.jpeg" 2x
+  );
+}
+
+.product_7{
+	grid-area: item7;
+	background-image: url("../products/airpods_pro.jpeg");
+  background-image: image-set(
+    "../products/airpods_pro.jpeg" 1x,
+    "../products/airpods_pro_2x.jpeg" 2x
+  );
+}
