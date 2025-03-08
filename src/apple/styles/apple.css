@@ -85,7 +85,6 @@ section{
 }
 
 .product_2{
-	grid-area: item2;
 	background-image: url("../products/ipad_air.jpeg");
   background-image: image-set(
     "../products/ipad_air.jpeg" 1x,
@@ -102,7 +101,6 @@ section{
 }
 
 .product_3{
-	grid-area: item3;
 	background-image: url("../products/iphone15_pro.jpeg");
   background-image: image-set(
     "../products/iphone15_pro.jpeg" 1x,
@@ -119,7 +117,6 @@ section{
 }
 
 .product_4{
-	grid-area: item4;
 	background-image: url("../products/iphone15.jpeg");
   background-image: image-set(
     "../products/iphone15.jpeg" 1x,
@@ -128,7 +125,6 @@ section{
 }
 
 .product_5{
-	grid-area: item5;
 	background-image: url("../products/apple_watch.jpeg");
   background-image: image-set(
     "../products/apple_watch.jpeg" 1x,
@@ -137,7 +133,6 @@ section{
 }
 
 .product_6{
-	grid-area: item6;
 	background-image: url("../products/macbook_air.jpeg");
   background-image: image-set(
     "../products/macbook_air.jpeg" 1x,
@@ -146,7 +141,6 @@ section{
 }
 
 .product_7{
-	grid-area: item7;
 	background-image: url("../products/airpods_pro.jpeg");
   background-image: image-set(
     "../products/airpods_pro.jpeg" 1x,
